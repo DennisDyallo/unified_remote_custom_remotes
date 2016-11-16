@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+	<row>
+		<label id="message" text="Start!" ontap="fade" />
+	</row>
+	
+	<row>
+		<text hint="Wait (minutes)" onchange="w_update" />
+	</row>
+	<row>
+		<text hint="Fade (minutes)" onchange="f_update" />
+	</row>
+	<row>
+		<toggle id="lightsToggle" text="Turn lights off after wait?" checked="true" onchange="k_changed" />
+	</row>
+
+
+
+</layout>
