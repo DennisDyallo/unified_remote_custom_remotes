@@ -103,6 +103,7 @@ function TurnOffLights(){
 
 $sw = [diagnostics.stopwatch]::StartNew()
 
+[console]::beep(2000,200); [console]::beep(1000,200);
 FadeVolumeLoop
 TurnOffSpeakers
 

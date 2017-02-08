@@ -1,4 +1,5 @@
-This a template for creating a new remote.
+This a custom remote.
+Should be placed in C:\ProgramData\Unified Remote\Remotes\Custom\
 
 	meta.prop: contains basic information about the remote
 	remote.lua: contains the Lua script implementation

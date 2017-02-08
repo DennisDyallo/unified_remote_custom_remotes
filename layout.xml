@@ -5,10 +5,10 @@
 	</row>
 	
 	<row>
-		<text hint="Wait (minutes)" onchange="w_update" />
+		<text text="0.5" hint="Wait (minutes)" onchange="w_update" />
 	</row>
 	<row>
-		<text hint="Fade (minutes)" onchange="f_update" />
+		<text text="30" hint="Fade (minutes)" onchange="f_update" />
 	</row>
 	<row>
 		<toggle id="lightsToggle" text="Turn lights off after wait?" checked="true" onchange="k_changed" />
