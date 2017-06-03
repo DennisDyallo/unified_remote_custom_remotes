@@ -17,8 +17,8 @@ local turnOffLightsAfterWait = 1;
 
 actions.fade = function ()
 	layout.message.text = "Fading over total ".. w_minutes + f_minutes .. " minutes";
-	script.powershell("./run.ps1 ".. w_minutes .." ".. f_minutes .. " " .. turnOffLightsAfterWait);
-	PowrProf.SetSuspendState(false, true, false);
+	--script.powershell("./run.ps1 ".. w_minutes .." ".. f_minutes .. " " .. turnOffLightsAfterWait);
+	--PowrProf.SetSuspendState(false, true, false);
 end
 
 actions.f_update = function (text)
@@ -38,4 +38,16 @@ actions.k_changed = function (checked)
 		layout.lightsToggle.text = "Turn lights OFF after FADE."
 		turnOffLightsAfterWait = 0;
 	end
+end
+
+actions.soundFromPc_click = function(checked)
+	layout.soundFromPc.checked = true;
+	script.powershell("Set-DefaultAudioDevice 'Line Out (2- Scarlett 2i4 USB)'")
+	layout.soundFromTv.checked = false;
+end
+
+actions.soundFromTv_click = function()
+	layout.soundFromTv.checked = true;
+	script.powershell("Set-DefaultAudioDevice 'SAMSUNG-4 (NVIDIA High Definition Audio)'")
+	layout.soundFromPc.checked = false;
 end

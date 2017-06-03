@@ -13,6 +13,10 @@
 	<row>
 		<toggle id="lightsToggle" text="Turn lights off after wait?" checked="true" onchange="k_changed" />
 	</row>
+	<row>
+		<toggle id="soundFromPc" text="Sound: PC" checked="true" ontap="soundFromPc_click" />
+		<toggle id="soundFromTv" text="Sound: TV" ontap="soundFromTv_click" />
+	</row>
 
 
 
