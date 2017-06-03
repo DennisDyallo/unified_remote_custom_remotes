@@ -17,8 +17,8 @@ local turnOffLightsAfterWait = 1;
 
 actions.fade = function ()
 	layout.message.text = "Fading over total ".. w_minutes + f_minutes .. " minutes";
-	--script.powershell("./run.ps1 ".. w_minutes .." ".. f_minutes .. " " .. turnOffLightsAfterWait);
-	--PowrProf.SetSuspendState(false, true, false);
+	script.powershell("./run.ps1 ".. w_minutes .." ".. f_minutes .. " " .. turnOffLightsAfterWait);
+	PowrProf.SetSuspendState(false, true, false);
 end
 
 actions.f_update = function (text)
