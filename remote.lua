@@ -42,12 +42,12 @@ end
 
 actions.soundFromPc_click = function(checked)
 	layout.soundFromPc.checked = true;
-	script.powershell("Set-DefaultAudioDevice 'Line Out (2- Scarlett 2i4 USB)'")
+	script.powershell("Get-AudioDevice -List | ForEach-Object -Process { if ($_.Name -Match 'Speakers \(RME'){Set-AudioDevice $_.Index}}")
 	layout.soundFromTv.checked = false;
 end
 
 actions.soundFromTv_click = function()
 	layout.soundFromTv.checked = true;
-	script.powershell("Set-DefaultAudioDevice 'SAMSUNG-4 (NVIDIA High Definition Audio)'")
+	script.powershell("Get-AudioDevice -List | ForEach-Object -Process { if ($_.Name -Match 'Samsung'){Set-AudioDevice $_.Index}}")
 	layout.soundFromPc.checked = false;
 end
